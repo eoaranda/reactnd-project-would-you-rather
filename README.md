@@ -1,68 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# "Would you rather" app
 
-## Available Scripts
 
-In the project directory, you can run:
+## Project:
 
-### `yarn start`
+This app was built as a project for the Udacity React Nanodegree Program. The purpose of the project is to demonstrate understanding of how Redux works in a React-based web app.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  
+## Installation
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  To get started:
 
-### `yarn test`
+* Clone the project: `git remote add origin https://github.com/eoaranda/reactnd-project-would-you-rather.git`
+* Install all project dependencies with `npm install`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Start server with `npm start`
 
-### `yarn build`
+* Navigate to `http://localhost:3000/`
+  
+  
+## Parts of the Application
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*  [`Login`](#login)
+*  [`Answered Questions`](#answered)
+* [`Un-Answered Questions`](#unanswered)
+*  [`New Questions`](#new)
+*  [`Leader Board`](#leader)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Login`
+* Login into the application using one of the exiting users from the drop down.
 
-### `yarn eject`
+![Bookshelves](doc/screenshots/login.gif  "login")
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `Answered Questions`
+* Display the Answered questions by the Logged in user.
+  
+![Search](doc/screenshots/answered.gif  "answered")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Un-Answered Questions`
+* Display the remaining questions to be answered by the Logged in user.
+  
+![Search](doc/screenshots/unanswered.gif  "unanswered")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `New Questions`
+* Create a new `would you rather` question for all the users to answer.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Filters](doc/screenshots/new.gif  "new")
 
-## Learn More
+### `Leader Board`
+* See the `user` that has answered more questions and who has the highest score.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Filters](doc/screenshots/leader.gif  "leader")
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Extras
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* As an extra I used the `reactstrap` library, based on Bootstrap 4.  [https://reactstrap.github.io/](https://reactstrap.github.io/)
