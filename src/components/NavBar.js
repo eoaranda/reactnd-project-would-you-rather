@@ -48,7 +48,7 @@ class NavBar extends Component {
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} to="/leaderboard">
-                    Leader Board
+                    Leaderboard
                   </NavLink>
                 </NavItem>
                 <NavItem>

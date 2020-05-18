@@ -24,7 +24,7 @@ This app was built as a project for the Udacity React Nanodegree Program. The pu
 * [`Answered`](#answered)
 * [`Un-Answered Questions`](#unanswered)
 * [`New Questions`](#new)
-* [`Leader Board`](#leader)
+* [`Leaderboard`](#leaderboard)
 
 
 ### `Login`
@@ -47,10 +47,10 @@ This app was built as a project for the Udacity React Nanodegree Program. The pu
 
 ![new](doc/screenshots/new.gif  "new")
 
-### `Leader Board`
+### `Leaderboard`
 * See the `user` that has answered more questions and who has the highest score.
 
-![leader](doc/screenshots/leader.gif  "leader")
+![Leaderboard](doc/screenshots/leader.gif  "Leaderboard")
 
 
 ## Extras
