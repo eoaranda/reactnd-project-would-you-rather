@@ -68,6 +68,7 @@ class NewQuestion extends Component {
                       value={optionOne}
                       onChange={this.handleOptionOneChange}
                       placeholder="Enter Option One Text Here"
+                      autoComplete="off"
                     />
                     <div className="text-center">OR</div>
                     <Input
@@ -76,6 +77,7 @@ class NewQuestion extends Component {
                       value={optionTwo}
                       onChange={this.handleOptionTwoChange}
                       placeholder="Enter Option Two Text Here"
+                      autoComplete="off"
                     />
                   </FormGroup>
                   <Button

@@ -10,7 +10,7 @@ This app was built as a project for the Udacity React Nanodegree Program. The pu
 
   To get started:
 
-* Clone the project: `git remote add origin https://github.com/eoaranda/reactnd-project-would-you-rather.git`
+* Clone the project: `https://github.com/eoaranda/reactnd-project-would-you-rather.git`
 * Install all project dependencies with `npm install`
 
 * Start server with `npm start`
