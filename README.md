@@ -21,8 +21,8 @@ This app was built as a project for the Udacity React Nanodegree Program. The pu
 ## Parts of the Application
 
 * [`Login`](#login)
-* [`Answered Questions`](#answered)
-* [`Un-Answered Questions`](#unanswered)
+* [`Answered`](#answered)
+* [`Un-Answered Questions`](#answered)
 * [`New Questions`](#new)
 * [`Leader Board`](#leader)
 
@@ -40,7 +40,7 @@ This app was built as a project for the Udacity React Nanodegree Program. The pu
 ### `Un-Answered Questions`
 * Display the remaining questions to be answered by the Logged in user.
   
-![unanswered](doc/screenshots/unanswered.gif  "unanswered")
+![answered](doc/screenshots/unanswered.gif  "unanswered")
 
 ### `New Questions`
 * Create a new `would you rather` question for all the users to answer.
