@@ -42,7 +42,7 @@ class NavBar extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} to="/new">
+                  <NavLink tag={Link} to="/add">
                     New Question
                   </NavLink>
                 </NavItem>

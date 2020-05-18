@@ -11,6 +11,7 @@ import Login from "./Login";
 import NewQuestion from "./NewQuestion";
 import QuestionDetails from "./QuestionDetails";
 import Logout from "./Logout";
+import NotFround from "./NotFound";
 
 class App extends Component {
   componentDidMount() {
@@ -23,21 +24,21 @@ class App extends Component {
       <Router>
         <Fragment>
           <NavBar />
-          <Switch>
-            {authUser === null ? (
-              <Fragment>
-                <Route path="/" exact component={Login} />
-              </Fragment>
-            ) : (
-              <Fragment>
-                <Route path="/" exact component={Home} />
-                <Route path="/leaderboard" exact component={LeaderBoard} />
-                <Route path="/new" component={NewQuestion} />
-                <Route path="/questions/:id" component={QuestionDetails} />
-                <Route exact path="/logout" component={Logout} />
-              </Fragment>
-            )}
-          </Switch>
+          {authUser === null ? (
+            <Switch>
+              <Route path="/" exact component={Login} />
+              <Route component={NotFround} />
+            </Switch>
+          ) : (
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/leaderboard" exact component={LeaderBoard} />
+              <Route path="/add" component={NewQuestion} />
+              <Route path="/questions/:id" component={QuestionDetails} />
+              <Route exact path="/logout" component={Logout} />
+              <Route component={NotFround} />
+            </Switch>
+          )}
         </Fragment>
       </Router>
     );
