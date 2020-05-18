@@ -22,7 +22,7 @@ This app was built as a project for the Udacity React Nanodegree Program. The pu
 
 * [`Login`](#login)
 * [`Answered`](#answered)
-* [`Un-Answered Questions`](#answered)
+* [`Un-Answered Questions`](#unanswered)
 * [`New Questions`](#new)
 * [`Leader Board`](#leader)
 
