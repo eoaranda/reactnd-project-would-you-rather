@@ -15,6 +15,7 @@ import {
   CustomInput,
   Progress,
 } from "reactstrap";
+import NotFound from "./NotFound";
 
 class QuestionDetails extends Component {
   state = {
@@ -44,6 +45,10 @@ class QuestionDetails extends Component {
       percTwo,
     } = this.props;
     const { selectedOption } = this.state;
+
+    if (question === null) {
+      return <NotFound />;
+    }
 
     return (
       <Row>
@@ -122,14 +127,18 @@ function mapStateToProps({ questions, users, authUser }, { match }) {
 
   const answers = users[authUser].answers;
   const { id } = match.params;
-  const question = questions[id];
+  const question = questions[id] ? questions[id] : null;
 
-  answer = answers.hasOwnProperty(question.id) ? answers[question.id] : null;
+  answer = question
+    ? answers.hasOwnProperty(question.id)
+      ? answers[question.id]
+      : null
+    : null;
 
-  const questionAuthor = users[question.author];
-  
-  optionOneTotal = question.optionOne.votes.length;
-  optionTwoTotal = question.optionTwo.votes.length;
+  const questionAuthor = question ? users[question.author] : null;
+
+  optionOneTotal = question ? question.optionOne.votes.length : null;
+  optionTwoTotal = question ? question.optionTwo.votes.length : null;
   total = optionOneTotal + optionTwoTotal;
   percOne = parseInt((optionOneTotal / total) * 100);
   percTwo = parseInt((optionTwoTotal / total) * 100);

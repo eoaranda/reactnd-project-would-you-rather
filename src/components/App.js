@@ -12,44 +12,33 @@ import NewQuestion from "./NewQuestion";
 import QuestionDetails from "./QuestionDetails";
 import Logout from "./Logout";
 import NotFround from "./NotFound";
+import PrivateRoute from "./PrivateRoute";
 
 class App extends Component {
   componentDidMount() {
     this.props.handleInitialData();
   }
   render() {
-    const { authUser } = this.props;
-
     return (
       <Router>
         <Fragment>
           <NavBar />
-          {authUser === null ? (
-            <Switch>
-              <Route path="/" exact component={Login} />
-              <Route component={NotFround} />
-            </Switch>
-          ) : (
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/leaderboard" exact component={LeaderBoard} />
-              <Route path="/add" component={NewQuestion} />
-              <Route path="/questions/:id" component={QuestionDetails} />
-              <Route exact path="/logout" component={Logout} />
-              <Route component={NotFround} />
-            </Switch>
-          )}
+          <Switch>
+            <PrivateRoute path="/" exact component={Home} />
+            <PrivateRoute path="/leaderboard" exact component={LeaderBoard} />
+            <PrivateRoute path="/add" component={NewQuestion} />
+            <PrivateRoute path="/questions/:id" component={QuestionDetails} />
+            <Route exact path="/logout" component={Logout} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/not-found" component={NotFround} />
+            <Route component={NotFround} />
+          </Switch>
         </Fragment>
       </Router>
     );
   }
 }
 
-function mapStateToProps({ authUser }) {
-  return {
-    authUser,
-  };
-}
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -59,4 +48,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
